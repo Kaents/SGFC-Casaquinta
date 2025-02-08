@@ -1,0 +1,844 @@
+/* ---------------------------------------------------
+   Variables
+--------------------------------------------------- */
+:root {
+    --color-background: #f4f7fa;
+    --color-white: #ffffff;
+    --color-primary: #5a7dbe;
+    --color-primary-dark: #0056b3;
+    --color-secondary: #6c757d;
+    --color-secondary-dark: #545b62;
+    --color-success: #28a745;
+    --color-success-dark: #1e7e34;
+    --color-warning: #ffc107;
+    --color-warning-dark: #e0a800;
+    --color-danger: #dc3545;
+    --color-danger-dark: #bd2130;
+    --color-info: #17a2b8;
+    --color-info-dark: #117a8b;
+    --color-muted: #ffffff;
+    --color-text: #2c3e50;
+    --color-light: #f8f9fa;
+    --color-border: #e9ecef;
+    --font-family: 'Roboto', sans-serif;
+    --transition-speed: 0.3s;
+}
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap');
+
+/* ---------------------------------------------------
+   Reset and Base Styles
+--------------------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-background);
+    font-family: var(--font-family);
+    color: var(--color-text);
+    line-height: 1.6;
+    background: url("body.jpg");
+    background-size: 4000px;
+    margin-bottom: -50px;
+}
+
+   
+    
+
+/* ---------------------------------------------------
+   Containers
+--------------------------------------------------- */
+.container-fluid {
+   
+    padding: 40px;
+    max-width: 1400px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+.registration-form {
+    background-color: white;
+    padding: 40px;
+    max-width: 700px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+.card-body-registro{
+    background-color: #5a7dbe;
+    padding: 40px;
+    max-width: 700px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+
+.list-group-item{
+   
+    border-bottom: 1px solid;
+    margin-bottom: 0px;
+}
+
+.card-body-crear-ficha{
+    background-color: #5a7dbe;
+    padding: 40px;
+    max-width: 700px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-body-editar-ficha{
+    background-color: #5a7dbe;
+    padding: 40px;
+    max-width: 700px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+.form-container {
+    background-color: var(--color-white);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    max-width: 80%; /* Cambiado a 80% para ocupar más espacio */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-wrapper {
+    background-color: var(--color-white);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    max-width: 700px; /* Ajuste a 900px */
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ---------------------------------------------------
+   Typography
+--------------------------------------------------- */
+h1, h4, .form-title, .page-title {
+    font-weight: 500;
+    color: white;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2{
+    font-weight: 500;
+    color: white;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-size: 2.0rem;
+}
+
+h3{
+    font-weight: 700;
+    color: black;
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    font-size: 2.2rem;
+}
+
+
+h4, .page-title {
+    font-size: 1.75rem;
+}
+
+.dashboard-subtitle {
+    font-size: 1rem;
+    color: var(--color-muted);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h4, .page-title {
+        font-size: 1.5rem;
+    }
+
+    .dashboard-subtitle {
+        font-size: 0.9rem;
+    }
+}
+
+/* ---------------------------------------------------
+   Buttons
+--------------------------------------------------- */
+/* ---------------------------------------------------
+   Buttons
+--------------------------------------------------- */
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background-color var(--transition-speed), transform 0.2s, opacity var(--transition-speed);
+    text-decoration: none;
+    color: var(--color-white);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    border: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    opacity: 0.9;
+    color: var(--color-white); /* Asegura que el texto siga siendo blanco */
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+    border: none;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: var(--color-secondary-dark);
+    transform: translateY(-2px);
+    opacity: 0.9;
+    color: var(--color-white); /* Asegura que el texto siga siendo blanco */
+}
+
+.btn-success {
+    background-color: var(--color-success);
+    border: none;
+}
+
+.btn-success:hover,
+.btn-success:focus {
+    background-color: var(--color-success-dark);
+    transform: translateY(-2px);
+    opacity: 0.9;
+    color: var(--color-white); /* Asegura que el texto siga siendo blanco */
+}
+
+.btn-warning {
+    background-color: var(--color-warning);
+    border: none;
+    color: var(--color-text); /* Mantener texto oscuro por defecto */
+}
+
+.btn-warning:hover,
+.btn-warning:focus {
+    background-color: var(--color-warning-dark);
+    transform: translateY(-2px);
+    opacity: 0.9;
+    color: var(--color-text); /* Asegura que el texto siga siendo oscuro */
+}
+
+.btn-danger {
+    background-color: var(--color-danger);
+    border: none;
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+    background-color: var(--color-danger-dark);
+    transform: translateY(-2px);
+    opacity: 0.9;
+    color: var(--color-white); /* Asegura que el texto siga siendo blanco */
+}
+
+.btn-info {
+    background-color: var(--color-info);
+    border: none;
+}
+
+.btn-info:hover,
+.btn-info:focus {
+    background-color: var(--color-info-dark);
+    transform: translateY(-2px);
+    opacity: 0.9;
+    color: var(--color-white); /* Asegura que el texto siga siendo blanco */
+}
+
+
+/* ---------------------------------------------------
+   Forms
+--------------------------------------------------- */
+.form-group {
+    margin-bottom: 20px;
+   
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.form-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+.form-error-message, .form-error {
+    color: var(--color-danger);
+    font-size: 0.875rem;
+    margin-top: 5px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.form-actions .btn {
+    width: 48%;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.form-input-checkbox {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.form-label-checkbox {
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+/* ---------------------------------------------------
+   Alerts
+--------------------------------------------------- */
+.alert {
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    position: relative;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.alert-success {
+    border-left: 5px solid var(--color-success);
+    color: #155724;
+    background-color: #d4edda;
+}
+
+.alert-danger {
+    border-left: 5px solid var(--color-danger);
+    color: #721c24;
+    background-color: #f8d7da;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ---------------------------------------------------
+   Tables
+--------------------------------------------------- */
+.table-container {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+    margin-top: 30px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.table th {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid var(--color-border);
+    font-size: 0.875rem;
+    white-space: nowrap;
+}
+
+.table th.table-header {
+    background-color: #5a7dbe;
+    color: var(--color-white);
+}
+
+.table td {
+    background-color: #3498db2d;
+    padding: 15px;
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border);
+    text-align: center;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    border-bottom: 1px solid;
+    }
+
+
+.table tbody tr:hover {
+    background-color: var(--color-light);
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.table td .btn {
+    margin: 2px 0;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.table td .btn i {
+    font-size: 0.875rem;
+}
+
+/* ---------------------------------------------------
+   Cards
+--------------------------------------------------- */
+.details-card {
+    background-color: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 15px 20px;
+    font-size: 1.25rem;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card-header h2.card-title {
+    color: white;
+    font-weight: 600;
+    font-size: 1.75rem;
+}
+
+.card-header h3.record-title {
+    color: var(--color-warning);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+
+
+.details-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.details-item {
+    flex: 1 1 45%;
+}
+
+.details-item p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form-actions .btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-actions .btn i {
+    margin-right: 8px;
+}
+
+/* ---------------------------------------------------
+   Medical Records Styles
+--------------------------------------------------- */
+.medical-record-card {
+    background-color: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.medical-record-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-info);
+    color: var(--color-white);
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.medical-record-card .card-header h3.record-title {
+    color: var(--color-warning);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.medical-record-card .card-body {
+    padding: 20px;
+    
+   
+}
+
+.medical-record-card .details-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.medical-record-card .details-item {
+    flex: 1 1 70%;
+}
+
+.medical-record-card .details-item p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.medical-record-card .details-item-action {
+    flex: 1 1 25%;
+    text-align: right;
+}
+
+.medical-record-card .details-item-action .btn {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .medical-record-card .details-row {
+        flex-direction: column;
+    }
+
+    .medical-record-card .details-item-action {
+        text-align: left;
+    }
+
+    .medical-record-card .details-item-action .btn {
+        width: auto;
+    }
+}
+
+/* ---------------------------------------------------
+   Enhanced Form Header
+--------------------------------------------------- */
+.form-header {
+    background-color: var(--color-light);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.form-header h1 {
+    font-size: 2rem;
+    color: var(--color-text);
+}
+
+.form-header .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+}
+
+/* ---------------------------------------------------
+   Improved Details Card for Medical Records
+--------------------------------------------------- */
+.medical-records-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ---------------------------------------------------
+   Responsive Adjustments
+--------------------------------------------------- */
+@media (max-width: 768px) {
+    .details-item {
+        flex: 1 1 100%;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .table th,
+    .table td {
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 0.875rem;
+        padding: 8px 16px;
+    }
+
+    .btn-sm {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+        border-radius: 20px;
+    }
+
+    .details-row {
+        flex-direction: column;
+    }
+
+    .details-item-action {
+        text-align: left;
+    }
+
+    /* Ajustes para los títulos en pantallas pequeñas */
+    .card-header h2.card-title {
+        font-size: 1.5rem;
+    }
+
+    .record-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* ---------------------------------------------------
+   Clase Base para Tarjetas Estándar
+--------------------------------------------------- */
+.standard-card {
+    background-color: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.standard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.standard-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 15px 20px;
+    font-size: 1.25rem;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.standard-card .card-body {
+    padding: 20px;
+    background-color: var(--color-light);
+}
+
+/* ---------------------------------------------------
+   Títulos Distintos
+--------------------------------------------------- */
+
+/* Título de la Página */
+/* Título de la Página */
+.page-title {
+    color: white;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Títulos de las Tarjetas */
+.card-title {
+    color: white;
+    font-weight: 600;
+    font-size: 1.75rem;
+}
+
+/* Encabezados de Tabla */
+.table-header {
+    color: var(--color-white);
+    background-color: var(--color-primary-dark);
+    font-weight: 600;
+}
+
+/* Títulos de Consultas Médicas en Naranja */
+.record-title {
+    color: var(--color-warning); /* Color Naranja */
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+/* ---------------------------------------------------
+   Mejoras para Botones Dentro de Tarjetas
+--------------------------------------------------- */
+.standard-card .btn-group .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Ajustes para Botones de Consultas Médicas */
+.medical-record-card .card-header .btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+}
+
+/* ---------------------------------------------------
+   Mejoras para Listas de Archivos Adjuntos
+--------------------------------------------------- */
+.details-item ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.details-item ul li {
+    margin-bottom: 8px;
+}
+
+.details-item ul li a {
+    color: var(--color-primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.details-item ul li a:hover {
+    text-decoration: underline;
+    color: var(--color-primary-dark);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Botón de Cerrar Sesión */
+.logout-link {
+    color: var(--color-secondary); /* Color del texto por defecto */
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    font-weight: 600; /* Aumenta el grosor de la fuente */
+}
+
+.logout-link:hover,
+.logout-link:focus {
+    color: var(--color-white); /* Texto blanco en hover */
+    background-color: var(--color-danger-dark); /* Fondo oscuro en hover */
+}
+
+.logout-link.active {
+    color: var(--color-white); /* Texto blanco cuando está activo */
+    background-color: var(--color-danger); /* Fondo rojo para estado activo */
+    border-bottom: 2px solid var(--color-danger-dark); /* Añadir borde inferior */
+}
+
+
+
+/* Enlaces en el navbar */
+nav a {
+    color: var(--color-text); /* Color oscuro por defecto */
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color var(--transition-speed), border-bottom var(--transition-speed);
+}
+
+nav a:hover, 
+nav a:focus {
+    color: var(--color-primary-dark); /* Color más oscuro en hover */
+    border-bottom: 2px solid var(--color-primary-dark); /* Añadir borde inferior en hover */
+}
+
+nav a[aria-current="page"] {
+    background-color: var(--color-light); /* Fondo claro para el enlace activo */
+    color: var(--color-primary-dark); /* Color más oscuro para el texto activo */
+    border-bottom: 2px solid var(--color-primary-dark); /* Borde inferior para el enlace activo */
+    border-radius: 4px;
+}
+
+
+
